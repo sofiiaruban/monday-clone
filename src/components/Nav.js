@@ -9,7 +9,7 @@ const Nav = () => {
       </div>
       <div className="controls-container">
         <div className="icon" onClick={() => navigate("/ticket")}>
-          ＋
+          &#43;
         </div>
         <div className="icon" onClick={() => navigate("/")}>
           ❮❮

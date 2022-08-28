@@ -57,9 +57,6 @@ const TicketPage = ({ editMode }) => {
     }
   }, []);
 
-  console.log("EDITcategories", categories);
-  console.log("formData", formData.status);
-  console.log("formData.status", formData.status === "stuck");
   return (
     <div className="ticket">
       <h1>{editMode ? "Update Your Ticket" : "Create a Ticket"}</h1>
@@ -73,7 +70,7 @@ const TicketPage = ({ editMode }) => {
               type="text"
               onChange={handleChange}
               required={true}
-              value={formData.title}
+              value={formData.title || ""}
             />
 
             <label htmlFor="description">Description</label>
@@ -83,7 +80,7 @@ const TicketPage = ({ editMode }) => {
               type="text"
               onChange={handleChange}
               required={true}
-              value={formData.description}
+              value={formData.description || ""}
             />
 
             <label>Category</label>
@@ -93,7 +90,9 @@ const TicketPage = ({ editMode }) => {
               onChange={handleChange}
             >
               {categories?.map((category, _index) => (
-                <option value={category}>{category}</option>
+                <option key={_index} value={category}>
+                  {category}
+                </option>
               ))}
             </select>
 
@@ -103,7 +102,7 @@ const TicketPage = ({ editMode }) => {
               name="category"
               type="text"
               onChange={handleChange}
-              value={formData.category}
+              value={formData.category || ""}
             />
 
             <label>Priority</label>
@@ -157,6 +156,7 @@ const TicketPage = ({ editMode }) => {
 
             {editMode && (
               <>
+                <label htmlFor="progress">Progress</label>
                 <input
                   type="range"
                   id="progress"
@@ -167,28 +167,26 @@ const TicketPage = ({ editMode }) => {
                   onChange={handleChange}
                 />
 
-                <label htmlFor="progress">Progress</label>
-
                 <label>Status</label>
                 <select
                   name="status"
                   value={formData.status}
                   onChange={handleChange}
                 >
-                  <option selected={formData.status == "done"} value="done">
+                  <option selected={formData.status === "done"} value="done">
                     Done
                   </option>
                   <option
-                    selected={formData.status == "working on it"}
+                    selected={formData.status === "working on it"}
                     value="working on it"
                   >
                     Working on it
                   </option>
-                  <option selected={formData.status == "stuck"} value="stuck">
+                  <option selected={formData.status === "stuck"} value="stuck">
                     Stuck
                   </option>
                   <option
-                    selected={formData.status == "not started"}
+                    selected={formData.status === "not started"}
                     value="not started"
                   >
                     Not Started
@@ -208,7 +206,7 @@ const TicketPage = ({ editMode }) => {
               type="owner"
               onChange={handleChange}
               required={true}
-              value={formData.owner}
+              value={formData.owner || ""}
             />
 
             <label htmlFor="avatar">Avatar</label>

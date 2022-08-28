@@ -2,12 +2,24 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', Arial, sans-serif;
+  overflow: hidden;
 }
 
 .app {
   display: flex;
 }
 
+@media screen and (max-width: 675px){
+  .app{
+    flex-direction: column;
+}
+}
+
+@media screen and (max-width: 975px){
+  .app{
+    flex-direction: column;
+}
+}
 #link {
 text-decoration: none;
 color: rgb(46, 46, 46);
@@ -17,7 +29,7 @@ color: rgb(46, 46, 46);
 
 nav {
   height: 100vh;
-  background-color: rgb(43, 43, 63);
+  background-color: rgb(25,67,107);
   color: rgb(255,255,255);
   text-align: center;
   display: flex;
@@ -30,6 +42,59 @@ nav .controls-container {
   padding: 40px 25px;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 1020px){
+  nav .logo-container,
+  nav .controls-container {
+  padding: 30px 15px;
+}
+}
+@media screen and (max-width: 1130px){
+  nav .logo-container,
+  nav .controls-container {
+  padding: 30px 15px;
+}
+}
+@media screen and (max-width: 780px){
+  nav .logo-container,
+  nav .controls-container {
+  padding: 20px 10px;
+}
+
+}
+@media screen and (max-width: 975px){
+  nav {
+    flex-direction: row;
+    height:60px;
+  }
+  nav .controls-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 875px){
+  nav {
+    height:50px;
+  }
+  nav .controls-container,
+  nav .logo-container {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 675px){
+  nav {
+    flex-direction: row;
+    height:60px;
+  }
+  nav .controls-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50px;
+  }
 }
 
 nav .logo-container img {
@@ -46,17 +111,34 @@ nav .icon {
   padding: 30px;
   width: 100%;
 }
-
-.dashboard .ticket-container {
-  height:80vh;
-  overflow: scroll;
+@media screen and (max-width: 1020px) {
+  .dashboard {
+    padding: 20px;
+  }
 }
+@media screen and (max-width: 785px) {
+  .dashboard {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .dashboard {
+    padding: 10px;
+  }
+}
+.dashboard .ticket-container {
+  height: 80vh;
+  overflow:  scroll;
+}
+
 /* ----- TicketCard ------ */
 .ticket-card {
   display: flex;
   width: 100%
 }
-
+.ticket h1 {
+  margin: 10px;
+}
 .ticket-card #link {
   display: flex;
   width: 100%;
@@ -71,11 +153,25 @@ nav .icon {
   align-items: center;
 }
 
+@media screen and (max-width: 985px) {
+  .ticket-card #link > * {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .ticket-card #link > * {
+    padding: 10px;
+  }
+}
 .ticket-card .ticket-color {
   width: 15px;
   margin: 2px;
 }
-
+@media screen and (max-width: 675px) {
+  .ticket-card .ticket-color {
+    display: none;
+  }
+}
 .ticket-card .avatar-container {
   display: flex;
   justify-content: center;
@@ -114,9 +210,27 @@ nav .icon {
   color: rgb(167, 167, 167);
 }
 
+@media screen and (max-width: 840px){
+  .ticket-card .priority-display .star-container h3 {
+   margin:5px;
+  }
+}
 .ticket-card .progress-display {
   min-width: 200px;
 }
+
+@media screen and (max-width: 895px){
+  .ticket-card .progress-display {
+    min-width: 160px;
+  }
+}
+@media screen and (max-width: 840px){
+  .ticket-card .progress-display {
+    min-width: 120px;
+  }
+}
+
+
 
 .ticket-card .delete-block {
   background-color: rgb(221, 221, 221);
@@ -146,7 +260,6 @@ nav .icon {
   overflow: hidden;
 }
 
-
 .ticket-card  .progress-bar .progress-indicator {
   background-color: rgb(104, 104, 175);
   height: 100%;
@@ -158,12 +271,30 @@ nav .icon {
   padding: 30px;
   width: 100%;
 }
-
+@media screen and (max-width: 1130px){
+  .ticket  {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 1065px){
+  .ticket  {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 1015px){
+  .ticket  {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 930px){
+  .ticket  {
+    padding: 5px;
+  }
+}
 .ticket .ticket-container {
   width: 100%;
   display: flex;
   justify-content: center;
-
 }
 .ticket form  {
   display: flex;
@@ -172,14 +303,84 @@ nav .icon {
 .ticket form section {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 0 10px;
   width: 500px;
 }
-
-.ticket form label {
-  margin: 15px 0 0 0;
+@media screen and (max-width: 1130px){
+  .ticket form section {
+    width: 480px;
+  }
 }
-
+@media screen and (max-width: 1065px){
+  .ticket form section {
+    width: 460px;
+  }
+}
+@media screen and (max-width: 1010px){
+  .ticket form section {
+    width: 440px;
+  }
+}
+@media screen and (max-width: 930px){
+  .ticket form section {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 875px){
+  .ticket form section {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 840px){
+  .ticket form section {
+    width: 380px;
+  }
+}
+@media screen and (max-width: 790px){
+  .ticket form section {
+    width: 360px;
+  }
+}
+@media screen and (max-width: 740px){
+  .ticket form section {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 710px){
+  .ticket form section {
+    width: 320px;
+  }
+}
+@media screen and (max-width: 640px){
+  .ticket form section {
+    width: 300px;
+  }
+}
+@media screen and (max-width:630px){
+  .ticket form section {
+    width: 280px;
+  }
+}
+@media screen and (max-width:590px){
+  .ticket form section {
+    width: 260px;
+  }
+}
+@media screen and (max-width:550px){
+  .ticket form section {
+    width: 240px;
+  }
+}
+@media screen and (max-width:510px){
+  .ticket form section {
+    width: 220px;
+  }
+}
+@media screen and (max-width:455px){
+  .ticket form section {
+    width: 400px;
+  }
+}
 .ticket form input, select {
   padding: 10px;
   font-size: 15px;
@@ -190,7 +391,7 @@ nav .icon {
 
 .ticket form .multiple-input-container {
   display: flex;
-  margin: 20px 0 20px 0;
+  margin: 10px 0 10px 0;
 }
 
 .ticket .img-preview {

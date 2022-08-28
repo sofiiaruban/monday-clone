@@ -11,7 +11,7 @@ const DeleteBlock = ({ documentId }) => {
   return (
     <div className="delete-block">
       <div className="delete-icon" onClick={deleteTicket}>
-        x
+        &#10006;
       </div>
     </div>
   );

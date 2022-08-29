@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import Dashboard from "./pages/Dashboard";
 import TicketPage from "./pages/TicketPage";
@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="app">
       <CategoriesContext.Provider value={value}>
-        <BrowserRouter>
+        <HashRouter>
           <Nav />
           <Routes>
             <Route path="/" element={<Dashboard />}></Route>
@@ -21,7 +21,7 @@ const App = () => {
               element={<TicketPage editMode={true} />}
             ></Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </CategoriesContext.Provider>
     </div>
   );

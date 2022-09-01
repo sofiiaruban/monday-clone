@@ -28,13 +28,13 @@
   "scripts": {
     "start:frontend": "react-scripts start",
     "start:backend": "nodemon server.js",
-    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "dev": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": " cross-env NODE_OPTIONS=--openssl-legacy-provider npm run build",
     "postinstall": "npm run webpack",
     "webpack": "webpack"
   },

@@ -32,7 +32,7 @@
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build",
     "postinstall": "npm run webpack",
-   "webpack": "webpack"
+    "webpack": "webpack"
   },
   "eslintConfig": {
     "extends": [

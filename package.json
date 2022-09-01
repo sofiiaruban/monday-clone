@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://sofiiaruban.github.io/monday-clone",
   "engines": {
-    "node": "17.3.0"
+    "node": "18.8.0"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -55,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@expo/webpack-config": "^0.17.2"
   }
 }

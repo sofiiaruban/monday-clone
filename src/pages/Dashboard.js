@@ -1,11 +1,10 @@
-import React, { Component } from "react";
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import CategoriesContext from "../context";
 import TicketCard from "../components/TicketСard";
 const Dashboard = () => {
   const [tickets, setTickets] = useState(null);
-  const { categories, setCategories } = useContext(CategoriesContext);
+  const { setCategories } = useContext(CategoriesContext);
 
   useEffect(() => {
     async function fetchData() {

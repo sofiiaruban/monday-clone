@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import blankAvatar from "../images/blank-profile.png";
 
 const AvatarDisplay = ({ ticket }) => {

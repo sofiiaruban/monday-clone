@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { useState, useEffect, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
@@ -10,7 +9,7 @@ const TicketPage = ({ editMode }) => {
     progress: 0,
     timestamp: new Date().toISOString(),
   });
-  const { categories, setCategories } = useContext(CategoriesContext);
+  const { categories } = useContext(CategoriesContext);
 
   const navigate = useNavigate();
   let { id } = useParams();

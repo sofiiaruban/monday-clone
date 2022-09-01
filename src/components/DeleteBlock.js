@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import axios from "axios";
 const DeleteBlock = ({ documentId }) => {
   const deleteTicket = async () => {
@@ -6,7 +5,7 @@ const DeleteBlock = ({ documentId }) => {
       `http://localhost:8000/tickets/${documentId}`
     );
 
-    const success = response.status == 200;
+    const success = response.status === 200;
     if (success) window.location.reload();
   };
   return (

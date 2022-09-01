@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 const PriorityDisplay = ({ priority }) => {
   return (
     <div className="priority-display">

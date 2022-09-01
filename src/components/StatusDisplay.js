@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 const StatusDisplay = ({ status }) => {
   const getColor = (status) => {
     let color;

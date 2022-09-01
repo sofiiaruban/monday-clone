@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 const ProgressDisplay = ({ progress }) => {
   return (
     <div className="progress-display">

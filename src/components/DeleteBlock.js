@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import axios from "axios";
 const DeleteBlock = ({ documentId }) => {
   const deleteTicket = async () => {

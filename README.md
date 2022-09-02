@@ -10,5 +10,5 @@ Monday  CRM  Clone
 
 ## <h1>Design</h1>
 <img src= "src/images/main-page.png"> 
-<img src= "src/images/update-page.png"> 
-<img src= "src/images/create-new-page.png"> 
+<img src= "src/images/update-page.png" width="900" height="415"> 
+<img src= "src/images/create-new-page.png" width="900" height="415"> 

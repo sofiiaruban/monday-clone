@@ -9,4 +9,6 @@ Monday  CRM  Clone
 <img src= "src/images/astra-logo.png" width="80" height="40"> </p>
 
 ## <h1>Design</h1>
-<img src= "src/images/main-page.png"> </p>
+<img src= "src/images/main-page.png"> 
+<img src= "src/images/update-page.png"> 
+<img src= "src/images/create-new-page.png"> 
